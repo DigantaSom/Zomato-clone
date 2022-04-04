@@ -1,12 +1,12 @@
 import Landing from '../../components/Landing/Landing';
-import ZomatoOptions from '../../components/ZomatoOptions/ZomatoOptions';
+import LandingTiles from '../../components/LandingTiles/LandingTiles';
 
 const Home = () => {
   return (
     <>
       <Landing />
       <div className='container'>
-        <ZomatoOptions />
+        <LandingTiles />
       </div>
     </>
   );

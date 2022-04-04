@@ -1,5 +1,7 @@
-.zomatoOptions__container {
+.landingTiles__container {
+  height: 15rem;
   margin-top: 2.2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
