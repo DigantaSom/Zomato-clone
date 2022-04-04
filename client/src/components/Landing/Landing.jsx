@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { HiLocationMarker } from 'react-icons/hi';
 import { BsSearch } from 'react-icons/bs';
 
-import Logo from '../../images/zomato-logo.png';
+import Logo from '../../images/zomato-name.png';
 import './Landing.css';
 
 const Landing = () => {
