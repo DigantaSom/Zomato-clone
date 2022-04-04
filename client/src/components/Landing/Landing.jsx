@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { HiLocationMarker } from 'react-icons/hi';
 import { BsSearch } from 'react-icons/bs';
 
@@ -7,13 +9,19 @@ import './Landing.css';
 
 const Landing = () => {
   const [searchText, setSearchText] = useState('');
+  const navigate = useNavigate();
 
   return (
     <div className='landing-container'>
       <nav className='container'>
         <div className='nav-left'>Get the App</div>
         <div className='nav-links'>
-          <div className='nav-link'>Add restaurant</div>
+          <div
+            className='nav-link'
+            onClick={() => navigate('/partner-with-us')}
+          >
+            Add restaurant
+          </div>
           <div className='nav-link'>Log in</div>
           <div className='nav-link'>Sign up</div>
         </div>
