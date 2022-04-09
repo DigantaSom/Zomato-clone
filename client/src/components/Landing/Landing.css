@@ -7,38 +7,12 @@
   position: relative;
 }
 
-.landing-container nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 4rem;
-}
-
-.nav-left {
-  color: white;
-  font-size: 0.9rem;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-
-.nav-link {
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.nav-link:not(:last-child) {
-  margin-right: 3.5rem;
-}
-
 .landing-info {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 55vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,26 +32,19 @@ h2 {
   color: white;
   font-weight: normal;
   font-size: 2.2rem;
+  text-align: center;
 }
 
-.input-container {
+.search-container {
   background-color: #eee;
   height: 3.4rem;
-  width: 55vw;
+  width: 100%;
   border-radius: 0.5rem;
   overflow: hidden; /* for border-radius */
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.15);
-}
-
-.input-container select,
-.input-container input {
-  height: 100%;
-  background-color: #eee;
-  border: none;
-  outline: none;
 }
 
 .select-container {
@@ -88,12 +55,20 @@ h2 {
   align-items: center;
 }
 
+.search-container select,
+.search-container input {
+  height: 100%;
+  background-color: #eee;
+  border: none;
+  outline: none;
+}
+
 .location-icon {
   font-size: 1.4rem;
   color: #f06565;
 }
 
-.input-container select {
+.search-container select {
   margin-left: 0.8rem;
   width: 100%;
   cursor: pointer;
@@ -101,19 +76,85 @@ h2 {
   font-size: 0.9rem;
 }
 
-.input-divder {
-  width: 3%;
-}
-
 .search-icon {
   margin-left: 1.2rem;
 }
 
-.input-container input {
+.search-container input {
   width: 65%;
   font-size: 1rem;
 }
 
-.input-container input::placeholder {
+.search-container input::placeholder {
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1190px) {
+  .landing-info {
+    width: 65vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .landing-info {
+    width: 70vw;
+  }
+
+  .logo {
+    width: 25vw;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .landing-info {
+    width: 80vw;
+  }
+
+  .logo {
+    width: 35vw;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* small screens from here */
+@media screen and (max-width: 615px) {
+  .search-container {
+    flex-direction: column;
+    background-color: transparent;
+    box-shadow: 0 0;
+    height: 100%;
+  }
+
+  .search-container .select-container,
+  .search-container input {
+    height: 2.5rem;
+    background-color: #eee;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .search-container .select-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .search-container input {
+    padding: 0.7rem;
+  }
+
+  .input-divider {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .logo {
+    width: 45vw;
+  }
 }

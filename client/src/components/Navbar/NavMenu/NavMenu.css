@@ -1,0 +1,25 @@
+.nav-menu__nav-menu {
+  padding: 5vw;
+  height: 100vh;
+}
+
+.nav-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.nav-menu__close-btn {
+  font-size: 1.5rem;
+}
+
+.nav-menu__img {
+  width: 8.5rem;
+}
+
+.nav-menu__nav-link {
+  padding: 1.25rem 0;
+  font-size: 1.2rem;
+  color: #757575;
+}

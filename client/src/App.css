@@ -9,10 +9,23 @@ body {
 }
 
 .container {
-  margin: 0 10vw;
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: 95vw;
+  }
 }

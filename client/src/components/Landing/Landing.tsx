@@ -1,37 +1,25 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import { HiLocationMarker } from 'react-icons/hi';
 import { BsSearch } from 'react-icons/bs';
+
+import Navbar from '../Navbar/Navbar';
 
 import Logo from '../../images/zomato-name.png';
 import './Landing.css';
 
 const Landing = () => {
   const [searchText, setSearchText] = useState('');
-  const navigate = useNavigate();
 
   return (
     <div className='landing-container'>
-      <nav className='container'>
-        <div className='nav-left'>Get the App</div>
-        <div className='nav-links'>
-          <div
-            className='nav-link'
-            onClick={() => navigate('/partner-with-us')}
-          >
-            Add restaurant
-          </div>
-          <div className='nav-link'>Log in</div>
-          <div className='nav-link'>Sign up</div>
-        </div>
-      </nav>
+      <Navbar />
       <div className='landing-info'>
         <div className='logo'>
           <img src={Logo} alt='Logo' />
         </div>
         <h2>Discover the best food & drinks in Kolkata</h2>
-        <div className='input-container'>
+        <div className='search-container'>
           <div className='select-container'>
             <HiLocationMarker className='location-icon' />
             <select name='area'>
@@ -40,7 +28,7 @@ const Landing = () => {
             </select>
           </div>
           <div className='input-divider'>
-            <span>|</span>
+            <span className='input-divider-span'>|</span>
             <BsSearch className='search-icon' />
           </div>
           <input

@@ -1,0 +1,55 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.nav-left {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 3.5rem;
+}
+
+@media screen and (max-width: 850px) {
+  .nav-link:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .nav-link:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .nav-left,
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+    font-size: 1.25rem;
+  }
+}
