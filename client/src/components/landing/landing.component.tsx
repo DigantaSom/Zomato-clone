@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { HiLocationMarker } from 'react-icons/hi';
 import { BsSearch } from 'react-icons/bs';
 
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../navbar/navbar.component';
 
 import Logo from '../../images/zomato-name.png';
-import './Landing.css';
+import './landing.styles.css';
 
 const Landing = () => {
   const [searchText, setSearchText] = useState('');
@@ -28,7 +28,7 @@ const Landing = () => {
             </select>
           </div>
           <div className='input-divider'>
-            <span className='input-divider-span'>|</span>
+            <span>|</span>
             <BsSearch className='search-icon' />
           </div>
           <input

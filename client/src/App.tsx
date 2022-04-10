@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 
 import { RootState } from './redux/store';
 
-import NavMenu from './components/Navbar/NavMenu/NavMenu';
-import Home from './pages/Home/Home';
-import PartnerWithUs from './pages/PartnerWithUs/PartnerWithUs';
-import MobileApp from './pages/MobileApp/MobileApp';
+import NavMenu from './components/navbar/nav-menu/nav-menu.component';
+import HomePage from './pages/home/home.component';
+import PartnerWithUs from './pages/partner-with-us/partner-with-us.component';
+import MobileAppPage from './pages/mobile-app/mobile-app.component';
 
 import './App.css';
 
@@ -16,9 +16,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={isMenuHidden ? <Home /> : <NavMenu />} />
+        <Route path='/' element={isMenuHidden ? <HomePage /> : <NavMenu />} />
         <Route path='partner-with-us' element={<PartnerWithUs />} />
-        <Route path='mobile' element={<MobileApp />} />
+        <Route path='mobile' element={<MobileAppPage />} />
       </Routes>
     </BrowserRouter>
   );

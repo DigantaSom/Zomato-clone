@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { TileI } from '../../types';
 
-import './LandingTile.css';
+import './landing-tile.styles.css';
 
 interface LandingTileProps {
   tile: TileI;

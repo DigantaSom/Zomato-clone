@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 import { toggleNavMenu } from '../../redux/UI/ui.actions';
 
-import './Navbar.css';
+import './navbar.styles.css';
 
 const Navbar = () => {
   const dispatch = useDispatch();

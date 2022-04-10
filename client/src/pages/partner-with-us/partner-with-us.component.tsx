@@ -1,4 +1,4 @@
-import './PartnerWithUs.css';
+import './partner-with-us.styles.css';
 
 const PartnerWithUs = () => {
   return <div>PartnerWithUs</div>;

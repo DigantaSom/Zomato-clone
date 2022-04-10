@@ -1,7 +1,8 @@
-import './LandingTiles.css';
+import LandingTile from '../landing-tile/landing-tile.component';
 
-import tileOptions from '../../constants/tileOptions';
-import LandingTile from '../LandingTile/LandingTile';
+import tileOptions from '../../constants/tileOptions.constant';
+
+import './landing-tiles.styles.css';
 
 const LandingTiles = () => {
   return (

@@ -63,6 +63,11 @@ h2 {
   outline: none;
 }
 
+.input-divider {
+  display: flex;
+  align-items: center;
+}
+
 .location-icon {
   font-size: 1.4rem;
   color: #f06565;
@@ -125,6 +130,10 @@ h2 {
 
 /* small screens from here */
 @media screen and (max-width: 615px) {
+  h2 {
+    font-size: 1.15rem;
+  }
+
   .search-container {
     flex-direction: column;
     background-color: transparent;
@@ -156,5 +165,9 @@ h2 {
 @media screen and (max-width: 320px) {
   .logo {
     width: 45vw;
+  }
+
+  h2 {
+    font-size: 1rem;
   }
 }

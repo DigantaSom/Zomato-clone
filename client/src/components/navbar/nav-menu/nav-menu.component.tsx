@@ -5,7 +5,7 @@ import { FaTimes } from 'react-icons/fa';
 import { toggleNavMenu } from '../../../redux/UI/ui.actions';
 
 import ZomatoTextBlack from '../../../images/zomato-text-black.png';
-import './NavMenu.css';
+import './nav-menu.styles.css';
 
 const NavMenu = () => {
   const dispatch = useDispatch();
