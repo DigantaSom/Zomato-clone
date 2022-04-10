@@ -27,8 +27,45 @@
   justify-content: center;
 }
 
-.info {
+.info p {
   color: #555;
   font-size: 1.2rem;
   font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .info p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .tile-image {
+    height: 75%;
+  }
+
+  .info {
+    height: 25%;
+    top: 75%;
+  }
+
+  .info p {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .tile-image {
+    height: 80%;
+  }
+
+  .info {
+    height: 20%;
+    top: 80%;
+  }
+
+  .info p {
+    font-size: 1rem;
+  }
 }
