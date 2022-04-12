@@ -11,9 +11,9 @@ interface LandingTileProps {
 
 const LandingTile: FC<LandingTileProps> = ({ tile: { title, imagePath } }) => {
   return (
-    <Link to='/' className='tile'>
-      <img src={imagePath} alt={title} className='tile-image' />
-      <div className='info'>
+    <Link to='/' className='landing-tile__tile'>
+      <img src={imagePath} alt={title} className='landing-tile__tile-image' />
+      <div className='landing-tile__info'>
         <p>{title}</p>
       </div>
     </Link>

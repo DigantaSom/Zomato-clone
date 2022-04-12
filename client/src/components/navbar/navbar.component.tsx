@@ -11,17 +11,23 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className='container'>
-      <div className='nav-left'>Get the App</div>
-      <div className='hamburger' onClick={() => dispatch(toggleNavMenu())}>
+    <nav className='container navbar__nav'>
+      <div className='navbar__nav-left'>Get the App</div>
+      <div
+        className='navbar__hamburger'
+        onClick={() => dispatch(toggleNavMenu())}
+      >
         <GiHamburgerMenu />
       </div>
-      <div className='nav-links'>
-        <div className='nav-link' onClick={() => navigate('/partner-with-us')}>
+      <div className='navbar__nav-links'>
+        <div
+          className='navbar__nav-link'
+          onClick={() => navigate('/partner-with-us')}
+        >
           Add restaurant
         </div>
-        <div className='nav-link'>Log in</div>
-        <div className='nav-link'>Sign up</div>
+        <div className='navbar__nav-link'>Log in</div>
+        <div className='navbar__nav-link'>Sign up</div>
       </div>
     </nav>
   );

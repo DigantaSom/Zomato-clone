@@ -1,4 +1,4 @@
-.tile {
+.landing-tile__tile {
   height: 100%;
   border: 1px solid #ddd;
   border-radius: 0.6rem;
@@ -7,17 +7,17 @@
   transition: all 300ms ease-out;
 }
 
-.tile:hover {
+.landing-tile__tile:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.tile-image {
+.landing-tile__tile-image {
   height: 80%;
   width: 100%;
 }
 
-.info {
+.landing-tile__info {
   height: 20%;
   width: 100%;
   position: absolute;
@@ -27,7 +27,7 @@
   justify-content: center;
 }
 
-.info p {
+.landing-tile__info p {
   color: #555;
   font-size: 1.2rem;
   font-weight: bold;
@@ -35,37 +35,37 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .info p {
+  .landing-tile__info p {
     font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .tile-image {
+  .landing-tile__tile-image {
     height: 75%;
   }
 
-  .info {
+  .landing-tile__info {
     height: 25%;
     top: 75%;
   }
 
-  .info p {
+  .landing-tile__info p {
     font-size: 0.85rem;
   }
 }
 
 @media screen and (max-width: 630px) {
-  .tile-image {
+  .landing-tile__tile-image {
     height: 80%;
   }
 
-  .info {
+  .landing-tile__info {
     height: 20%;
     top: 80%;
   }
 
-  .info p {
+  .landing-tile__info p {
     font-size: 1rem;
   }
 }

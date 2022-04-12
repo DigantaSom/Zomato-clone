@@ -13,17 +13,19 @@ const Landing = () => {
   const [searchText, setSearchText] = useState('');
 
   return (
-    <div className='landing-container'>
+    <div className='landing__container'>
       <Navbar />
-      <div className='landing-info'>
-        <div className='logo'>
+      <div className='landing__info'>
+        <div className='landing__logo'>
           <img src={Logo} alt='Logo' />
         </div>
-        <h2>Discover the best food & drinks in Kolkata</h2>
-        <div className='search-container'>
-          <div className='select-container'>
+        <h2 className='landing__title'>
+          Discover the best food & drinks in Kolkata
+        </h2>
+        <div className='landing__search-container'>
+          <div className='landing__select-container'>
             <HiLocationMarker
-              className='location-icon'
+              className='landing__location-icon'
               style={{ color: Colors.zomatoPink }}
             />
             <select name='area'>
@@ -31,9 +33,9 @@ const Landing = () => {
               <option value='Newtown'>Newtown area</option>
             </select>
           </div>
-          <div className='input-divider'>
+          <div className='landing__input-divider'>
             <span>|</span>
-            <BsSearch className='search-icon' />
+            <BsSearch className='landing__search-icon' />
           </div>
           <input
             type='text'

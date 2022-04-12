@@ -1,4 +1,4 @@
-.landing-container {
+.landing__container {
   background-image: url('../../images/zomato-landing.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.landing-info {
+.landing__info {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -19,23 +19,23 @@
   align-items: center;
 }
 
-.logo {
+.landing__logo {
   width: 20vw;
 }
 
-.logo img {
+.landing__logo img {
   width: 100%;
   height: 100%;
 }
 
-h2 {
+h2.landing__title {
   color: white;
   font-weight: normal;
   font-size: 2.2rem;
   text-align: center;
 }
 
-.search-container {
+.landing__search-container {
   background-color: #eee;
   height: 3.4rem;
   width: 100%;
@@ -47,7 +47,7 @@ h2 {
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
-.select-container {
+.landing__select-container {
   width: 27%;
   height: 100%;
   padding: 0.7rem;
@@ -55,24 +55,24 @@ h2 {
   align-items: center;
 }
 
-.search-container select,
-.search-container input {
+.landing__search-container select,
+.landing__search-container input {
   height: 100%;
   background-color: #eee;
   border: none;
   outline: none;
 }
 
-.input-divider {
+.landing__input-divider {
   display: flex;
   align-items: center;
 }
 
-.location-icon {
-  font-size: 1.4rem;
+.landing__location-icon {
+  font-size: 1.6rem;
 }
 
-.search-container select {
+.landing__search-container select {
   margin-left: 0.8rem;
   width: 100%;
   cursor: pointer;
@@ -80,31 +80,31 @@ h2 {
   font-size: 0.9rem;
 }
 
-.search-icon {
+.landing__search-icon {
   margin-left: 1.2rem;
 }
 
-.search-container input {
+.landing__search-container input {
   width: 65%;
   font-size: 1rem;
 }
 
-.search-container input::placeholder {
+.landing__search-container input::placeholder {
   font-size: 0.9rem;
 }
 
 @media screen and (max-width: 1190px) {
-  .landing-info {
+  .landing__info {
     width: 65vw;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .landing-info {
+  .landing__info {
     width: 70vw;
   }
 
-  .logo {
+  .landing__logo {
     width: 25vw;
   }
 
@@ -114,11 +114,11 @@ h2 {
 }
 
 @media screen and (max-width: 850px) {
-  .landing-info {
+  .landing__info {
     width: 80vw;
   }
 
-  .logo {
+  .landing__logo {
     width: 35vw;
   }
 
@@ -133,36 +133,36 @@ h2 {
     font-size: 1.15rem;
   }
 
-  .search-container {
+  .landing__search-container {
     flex-direction: column;
     background-color: transparent;
     box-shadow: 0 0;
     height: 100%;
   }
 
-  .search-container .select-container,
-  .search-container input {
+  .landing__search-container .landing__select-container,
+  .landing__search-container input {
     height: 2.5rem;
     background-color: #eee;
     width: 100%;
     border-radius: 0.5rem;
   }
 
-  .search-container .select-container {
+  .landing__search-container .landing__select-container {
     margin-bottom: 0.5rem;
   }
 
-  .search-container input {
+  .landing__search-container input {
     padding: 0.7rem;
   }
 
-  .input-divider {
+  .landing__input-divider {
     display: none;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .logo {
+  .landing__logo {
     width: 45vw;
   }
 
