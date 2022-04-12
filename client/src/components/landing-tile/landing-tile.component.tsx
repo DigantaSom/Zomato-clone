@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import { TileI } from '../../types';
 
@@ -10,12 +11,12 @@ interface LandingTileProps {
 
 const LandingTile: FC<LandingTileProps> = ({ tile: { title, imagePath } }) => {
   return (
-    <div className='tile'>
+    <Link to='/' className='tile'>
       <img src={imagePath} alt={title} className='tile-image' />
       <div className='info'>
         <p>{title}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

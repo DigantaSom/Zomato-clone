@@ -1,6 +1,6 @@
 import LandingTile from '../landing-tile/landing-tile.component';
 
-import tileOptions from '../../constants/tileOptions.constant';
+import tileOptions from '../../constants/tile-options.constant';
 
 import './landing-tiles.styles.css';
 

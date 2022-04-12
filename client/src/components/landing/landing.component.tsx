@@ -6,6 +6,7 @@ import { BsSearch } from 'react-icons/bs';
 import Navbar from '../navbar/navbar.component';
 
 import Logo from '../../images/zomato-name.png';
+import Colors from '../../constants/colors.constant';
 import './landing.styles.css';
 
 const Landing = () => {
@@ -21,7 +22,10 @@ const Landing = () => {
         <h2>Discover the best food & drinks in Kolkata</h2>
         <div className='search-container'>
           <div className='select-container'>
-            <HiLocationMarker className='location-icon' />
+            <HiLocationMarker
+              className='location-icon'
+              style={{ color: Colors.zomatoPink }}
+            />
             <select name='area'>
               <option value='Park Street'>Park Street area</option>
               <option value='Newtown'>Newtown area</option>

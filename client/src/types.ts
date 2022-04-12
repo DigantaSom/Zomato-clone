@@ -1,5 +1,9 @@
 export interface TileI {
-  id: number;
+  id: string;
   title: string;
   imagePath: string;
+}
+
+export interface CollectionItemI extends TileI {
+  numberOfPlaces: number;
 }
