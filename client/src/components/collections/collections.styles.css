@@ -3,7 +3,6 @@
 }
 
 h2.collections__heading {
-  font-size: 2.25rem;
   color: #1c1c1c;
   text-align: left;
   margin: 0 0 0.7rem 0;
@@ -48,10 +47,6 @@ h6.collections__subheading-left {
 }
 
 @media screen and (max-width: 850px) {
-  h2.collections__heading {
-    font-size: 1.9rem;
-  }
-
   h6.collections__subheading-left {
     font-size: 1rem;
   }

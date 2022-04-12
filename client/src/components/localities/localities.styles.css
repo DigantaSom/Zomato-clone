@@ -1,0 +1,27 @@
+.localities__container {
+  margin-top: 5rem;
+}
+
+.localities__inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.localities__heading {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.localities__heading p {
+  margin: 0;
+  color: #363636;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 630px) {
+  .localities__container {
+    margin-top: 3rem;
+  }
+}

@@ -14,7 +14,7 @@ interface CollectionsProps {
 const Collections: FC<CollectionsProps> = ({ collectionItems }) => {
   return (
     <div className='collections__container'>
-      <h2 className='collections__heading'>Collections</h2>
+      <h2 className='app__heading collections__heading'>Collections</h2>
       <div className='collections__subheading'>
         <h6 className='collections__subheading-left'>
           Explore curated lists of top restaurants, cafes, pubs, and bars in
