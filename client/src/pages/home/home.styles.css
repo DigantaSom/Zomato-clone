@@ -1,0 +1,16 @@
+.home__get-app__outer-container {
+  margin-top: 8rem;
+  background-color: #fffbf7;
+}
+
+@media screen and (max-width: 790px) {
+  .home__get-app__outer-container {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .home__get-app__outer-container {
+    margin-top: 4.5rem;
+  }
+}

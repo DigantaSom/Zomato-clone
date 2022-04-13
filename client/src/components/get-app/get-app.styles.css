@@ -1,0 +1,202 @@
+.get-app__inner-container {
+  padding: 5rem 0;
+}
+
+.get-app__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.get-app__content-left {
+  height: 16rem;
+  max-width: 30%;
+  margin-right: 2rem;
+}
+
+.get-app__content-left img {
+  height: 100%;
+  width: 100%;
+}
+
+.get-app__content-right {
+  max-width: 60%;
+}
+
+h2.get-app__title {
+  color: #1c1c1c;
+  font-size: 2.75rem;
+  font-weight: 500;
+  margin: 0 0 1.7rem;
+}
+
+.get-app__content-right p {
+  color: #363636;
+  font-size: 1rem;
+  margin: 0 0 1.7rem;
+}
+
+.get-app__radio-buttons-container {
+  width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.get-app__radio-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.get-app__radio-button input[type='radio'] {
+  border: 0;
+  width: 100%;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.get-app__radio-button label {
+  margin-top: 0.4rem;
+  cursor: pointer;
+}
+
+.get-app__input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+}
+
+.get-app__input-container input,
+.get-app__phone-input-container {
+  width: 70%;
+  flex: 1;
+}
+
+.get-app__input-container input {
+  padding: 1.3rem 1.2rem;
+  height: 2.8rem;
+  border: 0.1rem solid #cfcfcf;
+  border-radius: 0.4rem;
+  outline: none;
+  font-size: 1.125rem;
+}
+
+.get-app__input-container input[type='tel'] {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.get-app__phone-input-container {
+  display: flex;
+}
+
+.get-app__phone-input-container select {
+  width: 17%;
+  font-size: 1rem;
+  text-align: center;
+  border: 0.1rem solid #cfcfcf;
+  border-right: none;
+  border-radius: 0.4rem 0 0 0.4rem;
+  outline: none;
+}
+
+button.get-app__submit-btn,
+button.get-app__submit-btn-sm {
+  color: #fff;
+  font-size: 1rem;
+  height: 2.8rem;
+  padding: 0 0.8rem;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  outline: none;
+}
+
+button.get-app__submit-btn:hover,
+button.get-app__submit-btn-sm:hover {
+  background-color: #e03f4f !important;
+  cursor: pointer;
+}
+
+button.get-app__submit-btn-sm {
+  display: none;
+}
+
+.get-app__download-section p {
+  color: #9c9c9c;
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
+}
+
+.get-app__download-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.get-app__download-buttons img {
+  width: 8.2rem;
+  height: 2.4rem;
+}
+
+.get-app__download-buttons img:first-child {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 790px) {
+  h2.get-app__title {
+    font-size: 2rem;
+    margin: 0 0 1.7rem;
+  }
+
+  .get-app__input-container input,
+  .get-app__phone-input-container {
+    width: 80%;
+  }
+
+  button.get-app__submit-btn {
+    display: none;
+  }
+
+  button.get-app__submit-btn-sm {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .get-app__content-left {
+    margin-right: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .get-app__content-left {
+    display: none;
+  }
+
+  .get-app__content-right {
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .get-app__phone-input-container select {
+    width: 22%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .get-app__phone-input-container select {
+    width: 30%;
+  }
+
+  .get-app__download-buttons img {
+    width: 46%;
+  }
+}
