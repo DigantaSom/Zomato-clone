@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <>
       <Landing />
-      <div className='container'>
+      <div className='app__container'>
         <LandingTiles />
         <Collections collectionItems={collectionItems} />
         <Localities />
@@ -21,7 +21,7 @@ const HomePage = () => {
       <div className='home__get-app__outer-container'>
         <GetApp />
       </div>
-      <div className='container'>
+      <div className='app__container'>
         <ExploreOtherOptions />
       </div>
     </>

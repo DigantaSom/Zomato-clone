@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className='container navbar__nav'>
+    <nav className='app__container navbar__nav'>
       <div className='navbar__nav-left'>Get the App</div>
       <div
         className='navbar__hamburger'
