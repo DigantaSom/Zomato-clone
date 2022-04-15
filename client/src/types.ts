@@ -13,3 +13,25 @@ export interface LocalityI {
   name: string;
   numberOfPlaces: number;
 }
+
+export type ExploreOptionsKeyType =
+  | 'Popular cuisines near me'
+  | 'Popular restaurant types near me'
+  | 'Top Restaurant Chains'
+  | 'Cities We Deliver To';
+
+export type ExploreOptionsValueTextType = {
+  id: string;
+  text: string;
+  url: string;
+};
+
+type ExploreOptionsValueType = {
+  value: ExploreOptionsValueTextType[];
+  displayType: 'dotted' | 'column';
+};
+
+export type ExploreOptionsType = Record<
+  ExploreOptionsKeyType,
+  ExploreOptionsValueType
+>;

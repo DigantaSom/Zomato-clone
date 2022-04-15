@@ -1,0 +1,57 @@
+.eoo__container {
+  margin-top: 8rem;
+}
+
+.eoo__inner-container {
+  margin-bottom: 4rem;
+}
+
+h2.eoo__heading {
+  color: #363636;
+  font-size: 2.3rem;
+  font-weight: 500;
+  margin: 0 0 1.875rem;
+}
+
+h4.eoo__subheading {
+  font-size: 1.6rem;
+  margin: 0 0 1.2rem;
+  font-weight: 200;
+}
+
+/* this 'a'(Link) element in both ExploreOptionsDotted and ExploreOptionsColumn components */
+.eoo__inner-container a {
+  color: #828282;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 790px) {
+  .eoo__container {
+    margin-top: 6rem;
+  }
+
+  .eoo__inner-container {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  h2.eoo__heading {
+    font-size: 2rem;
+  }
+
+  h4.eoo__subheading {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .eoo__container {
+    margin-top: 4.5rem;
+  }
+
+  .eoo__inner-container {
+    margin-bottom: 2.75rem;
+  }
+}
