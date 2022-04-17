@@ -140,10 +140,10 @@ button.get-app__submit-btn-sm {
   align-items: center;
 }
 
-.get-app__download-buttons img {
+/* .get-app__download-buttons img {
   width: 8.2rem;
   height: 2.4rem;
-}
+} */
 
 .get-app__download-buttons img:first-child {
   margin-right: 1rem;
@@ -196,7 +196,7 @@ button.get-app__submit-btn-sm {
     width: 30%;
   }
 
-  .get-app__download-buttons img {
+  /* .get-app__download-buttons img {
     width: 46%;
-  }
+  } */
 }

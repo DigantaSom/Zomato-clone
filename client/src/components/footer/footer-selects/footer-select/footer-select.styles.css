@@ -1,0 +1,65 @@
+.footer-select__container {
+  padding: 0.5rem 0.4rem;
+  border: 1px solid #b5b5b5;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.footer-select__container:last-child {
+  margin-left: 0.9rem;
+}
+
+.footer-select__container:hover {
+  cursor: pointer;
+}
+
+.footer-select__img {
+  width: 1.5rem;
+  height: 1rem; /* matches with the font-size of .footer-select__container */
+}
+
+.footer-select__icon {
+  opacity: 0.7;
+}
+
+.footer-select__container span {
+  padding: 0 0.5rem;
+  opacity: 0.7;
+}
+
+/* 
+  Common styles(5+1m) of the outer containers of the child components: FooterCountries and FooterLanguages
+*/
+.footer-select__boxes-outer-container {
+  padding: 0.625rem 0.8rem;
+  box-shadow: 0.1rem 4rem 4rem rgb(0 0 0 / 15%);
+  border-radius: 0.4rem;
+  background-color: white;
+  position: absolute;
+  bottom: 3rem;
+  z-index: 10;
+  max-width: 90vw; /* to match with .app__container */
+}
+.footer-select__boxes-item {
+  padding: 0.5rem 0.6rem;
+}
+.footer-select__boxes-item span {
+  opacity: 0.9;
+}
+.footer-select__boxes-item:hover {
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+.footer-select__boxes-item-active {
+  background-color: #edf4ff;
+}
+
+@media screen and (max-width: 320px) {
+  .footer-select__boxes-outer-container {
+    padding: 0.4rem;
+    max-width: 95vw; /* to match with .app__container */
+  }
+}

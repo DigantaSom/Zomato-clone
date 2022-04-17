@@ -4,6 +4,7 @@ import Collections from '../../components/collections/collections.component';
 import Localities from '../../components/localities/localities.component';
 import GetApp from '../../components/get-app/get-app.component';
 import ExploreOtherOptions from '../../components/explore-other-options/explore-other-options.component';
+import Footer from '../../components/footer/footer.component';
 
 import collectionItems from '../../constants/collection-items.constant';
 
@@ -24,6 +25,7 @@ const HomePage = () => {
       <div className='app__container'>
         <ExploreOtherOptions />
       </div>
+      <Footer />
     </>
   );
 };

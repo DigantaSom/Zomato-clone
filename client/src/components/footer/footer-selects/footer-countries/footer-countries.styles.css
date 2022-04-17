@@ -1,0 +1,65 @@
+/* Common styles are in .footer-select__boxes-outer-container */
+.footer-countries__container {
+  right: 0;
+}
+
+.footer-countries__inner-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-countries__item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.4rem;
+}
+
+img.footer-countries__flag {
+  width: 1.5rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+}
+
+.footer-countries__name {
+  min-width: 5rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 565px) {
+  .footer-countries__inner-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .footer-countries__container {
+    right: -13rem;
+  }
+
+  .footer-countries__inner-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-countries__container {
+    left: 0;
+  }
+
+  .footer-countries__inner-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer-countries__inner-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer-countries__container {
+    left: -0.5rem;
+  }
+}

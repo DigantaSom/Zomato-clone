@@ -1,0 +1,135 @@
+footer.footer__container {
+  background-color: #f9f9f9;
+  padding: 3rem 0 1.3rem;
+}
+
+.footer__main {
+  border-bottom: 1px solid rgba(105, 105, 105, 0.6);
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.7rem;
+}
+
+.footer__logo {
+  width: 8.25rem;
+  height: 1.75rem;
+}
+
+.footer__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__links-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__links-left-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer__link-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.9rem;
+}
+
+h6.footer__link-header {
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.footer__link {
+  color: rgba(105, 105, 105, 0.8);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  margin: 0.3rem 0;
+}
+
+.footer__links-right-container {
+  position: relative;
+  right: 0;
+}
+
+.footer__social-links {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem; /* to match with .footer__link's margin */
+  margin-bottom: 0.5rem;
+}
+
+.footer__social-links a {
+  font-size: 1rem;
+}
+
+.footer__social-links a:not(:last-child) {
+  padding-right: 0.8rem;
+}
+
+.footer__download-buttons-container {
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__download-buttons-container img {
+  margin-top: 0.4rem;
+}
+
+.footer__copyright {
+  margin: 1.43rem 0 0.81rem;
+}
+
+.footer__copyright small {
+  color: rgba(79, 79, 79, 0.7);
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 870px) {
+  .footer__links-left-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer.footer__container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2.7rem;
+  }
+
+  .footer__logo {
+    margin-bottom: 2.3rem;
+  }
+
+  .footer__links-right-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer__links-left-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* h6.footer__link-header,
+  .footer__link {
+    text-align: center;
+  } */
+}

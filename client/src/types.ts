@@ -35,3 +35,9 @@ export type ExploreOptionsType = Record<
   ExploreOptionsKeyType,
   ExploreOptionsValueType
 >;
+
+export interface CountryFlagI {
+  id: string;
+  name: string;
+  flagUri: string;
+}

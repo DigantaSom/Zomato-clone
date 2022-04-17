@@ -1,0 +1,9 @@
+/* Common styles are in .footer-select__boxes-outer-container */
+.footer-languages__container {
+  right: 0;
+}
+
+.footer-languages__inner-container {
+  display: flex;
+  flex-direction: column;
+}

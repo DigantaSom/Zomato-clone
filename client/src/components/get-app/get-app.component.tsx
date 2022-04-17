@@ -1,8 +1,8 @@
 import { ChangeEvent, useState } from 'react';
 
+import AppDownloadButtons from '../app-download-buttons/app-download-buttons.component';
+
 import GetZomatoApp_Img from '../../images/get-zomato-app.png';
-import AppStore_Img from '../../images/download-zomato-app-store.png';
-import GooglePlay_Img from '../../images/download-zomato-google-play.png';
 
 import Colors from '../../constants/colors.constant';
 import countryCodes from '../../constants/country-codes.constant';
@@ -110,8 +110,7 @@ const GetApp = () => {
           <div className='get-app__download-section'>
             <p>Download app from</p>
             <div className='get-app__download-buttons'>
-              <img src={AppStore_Img} alt='App Store' />
-              <img src={GooglePlay_Img} alt='Google Play' />
+              <AppDownloadButtons />
             </div>
           </div>
         </div>

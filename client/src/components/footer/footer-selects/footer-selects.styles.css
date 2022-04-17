@@ -1,0 +1,6 @@
+.footer-selects__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* For footer-country and footer-language components */
+}

@@ -1,0 +1,10 @@
+.download-buttons__img {
+  width: 8.2rem;
+  height: 2.4rem;
+}
+
+@media screen and (max-width: 320px) {
+  .download-buttons__img {
+    width: 48%;
+  }
+}
