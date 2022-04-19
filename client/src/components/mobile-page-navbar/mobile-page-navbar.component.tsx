@@ -1,9 +1,8 @@
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import { toggleNavMenu } from '../../redux/UI/ui.actions';
-
-import GetApp from '../get-app/get-app.component';
 
 import Logo from '../../images/zomato-text-black.png';
 import './mobile-page-navbar.styles.css';
@@ -14,7 +13,9 @@ const MobilePageNavbar = () => {
   return (
     <div className='mobile-page-navbar__container'>
       <div className='mobile-page-navbar__inner-container'>
-        <img className='moble-page-navbar__logo' src={Logo} alt='Zomato' />
+        <Link to='/'>
+          <img className='moble-page-navbar__logo' src={Logo} alt='Zomato' />
+        </Link>
         <div className='mobile-page-navbar__links'>
           <div className='mobile-page-navbar__link' onClick={() => {}}>
             Log in
@@ -31,11 +32,10 @@ const MobilePageNavbar = () => {
         >
           <GiHamburgerMenu />
         </div>
-        <img className='moble-page-navbar__logo' src={Logo} alt='Zomato' />
+        <Link to='/'>
+          <img className='moble-page-navbar__logo' src={Logo} alt='Zomato' />
+        </Link>
       </div>
-
-      {/* FIXME: with dynamic style in this component */}
-      <GetApp />
     </div>
   );
 };

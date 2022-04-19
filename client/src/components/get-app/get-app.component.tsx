@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { FC, ChangeEvent, useState } from 'react';
 
 import AppDownloadButtons from '../app-download-buttons/app-download-buttons.component';
 
@@ -9,8 +9,12 @@ import countryCodes from '../../constants/country-codes.constant';
 
 import './get-app.styles.css';
 
+interface GetAppProps {
+  page: 'Home' | 'Mobile';
+}
+
 // This component has a variable outer container
-const GetApp = () => {
+const GetApp: FC<GetAppProps> = ({ page }) => {
   const [medium, setMedium] = useState<'Email' | 'Phone'>('Email');
   const [formData, setFormData] = useState({
     email: '',
@@ -27,9 +31,19 @@ const GetApp = () => {
   };
 
   return (
-    <div className='get-app__inner-container'>
-      <div className='get-app__content'>
-        <div className='get-app__content-left'>
+    <div className={`${page === 'Home' ? 'get-app__inner-container' : ''}`}>
+      <div
+        className={`get-app__content ${
+          page === 'Home' ? 'get-app__content--from-home' : ''
+        }`}
+      >
+        <div
+          className={`${
+            page === 'Home'
+              ? 'get-app__content-left'
+              : 'get-app__content-left--lg-img'
+          }`}
+        >
           <img src={GetZomatoApp_Img} alt='Get App' />
         </div>
 

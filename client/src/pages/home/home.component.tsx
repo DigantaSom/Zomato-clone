@@ -20,7 +20,7 @@ const HomePage = () => {
         <Localities />
       </div>
       <div className='home__get-app__outer-container'>
-        <GetApp />
+        <GetApp page='Home' />
       </div>
       <div className='app__container'>
         <ExploreOtherOptions />

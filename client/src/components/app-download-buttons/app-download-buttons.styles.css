@@ -3,8 +3,14 @@
   height: 2.4rem;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 340px) {
   .download-buttons__img {
-    width: 48%;
+    width: 7.5rem;
+  }
+}
+
+@media screen and (max-width: 295px) {
+  .download-buttons__img {
+    width: 7rem;
   }
 }

@@ -1,10 +1,19 @@
 .mobile-app__container {
   padding: 0 20vw;
 }
+.mobile-app__get-app-outer-container {
+  max-width: 60vw; /* should match with .mobile-app__container's padding */
+  margin: 6rem auto;
+  /* 5rem is the height of the header of this page */
+  min-height: calc((100vh - 5rem) * 0.65);
+}
 
 @media screen and (max-width: 1250px) {
   .mobile-app__container {
     padding: 0 15vw;
+  }
+  .mobile-app__get-app-outer-container {
+    max-width: 70vw; /* should match with .mobile-app__container's padding */
   }
 }
 
@@ -12,16 +21,18 @@
   .mobile-app__container {
     padding: 0 10vw;
   }
+  .mobile-app__get-app-outer-container {
+    max-width: 80vw; /* should match with .mobile-app__container's padding */
+  }
 }
 
 @media screen and (max-width: 850px) {
   .mobile-app__container {
     padding: 0 5vw;
   }
-}
-
-@media screen and (max-width: 450px) {
-  .mobile-app__container {
-    padding: 0 2.5vw;
+  .mobile-app__get-app-outer-container {
+    /* 4rem is the height of the header of this page */
+    min-height: calc((100vh - 4rem) * 0.65);
+    max-width: 90vw; /* should match with .mobile-app__container's padding */
   }
 }
