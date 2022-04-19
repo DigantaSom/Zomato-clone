@@ -1,8 +1,8 @@
 .mobile-app__get-app-outer-container {
   max-width: 60vw; /* should match with .mobile-app__container's padding */
-  margin: 6rem auto;
+  margin: 6rem auto 0;
   /* 5rem is the height of the header of this page */
-  min-height: calc((100vh - 5rem) * 0.65);
+  height: calc((100vh - 5rem - 6rem));
 }
 
 @media screen and (max-width: 1250px) {
@@ -20,7 +20,34 @@
 @media screen and (max-width: 850px) {
   .mobile-app__get-app-outer-container {
     /* 4rem is the height of the header of this page */
-    min-height: calc((100vh - 4rem) * 0.65);
+    height: calc((100vh - 4rem - 6rem));
     max-width: 90vw; /* should match with .mobile-app__container's padding */
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .mobile-app__get-app-outer-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    /* 4rem is the height of the header of this page */
+    height: calc((100vh - 4rem - 6rem) * 0.7);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .mobile-app__get-app-outer-container {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mobile-app__get-app-outer-container {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .mobile-app__get-app-outer-container {
+    margin-bottom: 3.5rem;
   }
 }
