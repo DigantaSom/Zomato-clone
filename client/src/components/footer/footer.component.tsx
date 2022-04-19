@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { SiLinkedin } from 'react-icons/si';
@@ -11,10 +12,18 @@ import FooterLogo from '../../images/zomato-text-black.png';
 
 import './footer.styles.css';
 
-const Footer = () => {
+interface FooterProps {
+  page: 'Home' | 'MobileApp';
+}
+
+const Footer: FC<FooterProps> = ({ page }) => {
   return (
     <footer className='footer__container'>
-      <div className='app__container'>
+      <div
+        className={`${
+          page === 'MobileApp' ? 'mobile-app__container' : 'app__container'
+        }`}
+      >
         <div className='footer__main'>
           <div className='footer__top'>
             <div className='footer__logo'>

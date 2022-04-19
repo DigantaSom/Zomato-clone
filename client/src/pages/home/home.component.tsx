@@ -25,7 +25,7 @@ const HomePage = () => {
       <div className='app__container'>
         <ExploreOtherOptions />
       </div>
-      <Footer />
+      <Footer page='Home' />
     </>
   );
 };

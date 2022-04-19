@@ -63,3 +63,9 @@
     max-width: 95vw; /* to match with .app__container */
   }
 }
+
+@media screen and (max-width: 290px) {
+  .footer-select__container span {
+    padding: 0 0.2rem;
+  }
+}

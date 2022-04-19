@@ -1,6 +1,7 @@
 import MobilePageNavbar from '../../components/mobile-page-navbar/mobile-page-navbar.component';
 import GetApp from '../../components/get-app/get-app.component';
 import Divider from '../../components/divider/divider.component';
+import Footer from '../../components/footer/footer.component';
 
 import './mobile-app.styles.css';
 
@@ -14,6 +15,7 @@ const MobileAppPage = () => {
       <div className='mobile-app__contaner mobile-app__get-app-outer-container'>
         <GetApp page='Mobile' />
       </div>
+      <Footer page='MobileApp' />
     </>
   );
 };
