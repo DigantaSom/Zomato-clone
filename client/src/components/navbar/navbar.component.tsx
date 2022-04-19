@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
@@ -12,7 +12,9 @@ const Navbar = () => {
 
   return (
     <nav className='app__container navbar__nav'>
-      <div className='navbar__nav-left'>Get the App</div>
+      <div className='navbar__nav-left'>
+        <Link to='/mobile'>Get the App</Link>
+      </div>
       <div
         className='navbar__hamburger'
         onClick={() => dispatch(toggleNavMenu())}

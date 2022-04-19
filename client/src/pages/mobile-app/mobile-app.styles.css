@@ -1,0 +1,27 @@
+.mobile-app__container {
+  padding: 0 20vw;
+}
+
+@media screen and (max-width: 1250px) {
+  .mobile-app__container {
+    padding: 0 15vw;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .mobile-app__container {
+    padding: 0 10vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .mobile-app__container {
+    padding: 0 5vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mobile-app__container {
+    padding: 0 2.5vw;
+  }
+}
