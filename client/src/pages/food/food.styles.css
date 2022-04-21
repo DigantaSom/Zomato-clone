@@ -1,0 +1,36 @@
+.food-page__header {
+  margin: 0.5rem 0 1.2rem;
+}
+
+.food-page__header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.food-page__header-logo {
+  width: 8.5rem;
+}
+
+.food-page__header-searchbar-container {
+  flex: 1;
+  margin: 0 1.5rem;
+}
+
+.food-page__header-auth-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1000px) {
+  .food-page__header-searchbar-container {
+    margin: 0 0.75rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .food-page__header-inner {
+    display: none;
+  }
+}

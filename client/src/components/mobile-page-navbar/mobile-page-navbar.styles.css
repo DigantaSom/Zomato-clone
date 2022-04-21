@@ -9,7 +9,7 @@
   height: 5rem;
 }
 
-.moble-page-navbar__logo {
+.mobile-page-navbar__logo {
   width: 8.75rem;
   height: 1.86rem;
 }
@@ -21,32 +21,8 @@
   right: 0;
 }
 
-.mobile-page-navbar__link {
-  margin-left: 2rem;
-  font-size: 1.2rem;
-  color: #696969;
-  opacity: 0.9;
-  cursor: pointer;
-}
-
-.moblie-page-navbar__inner-container--sm {
-  display: none;
-}
-
 @media screen and (max-width: 768px) {
   .mobile-page-navbar__inner-container {
     display: none;
-  }
-
-  .moblie-page-navbar__inner-container--sm {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 4rem;
-  }
-
-  .mobile-page-navbar__hamburger {
-    font-size: 1.5rem;
-    margin-top: 0.35rem;
   }
 }

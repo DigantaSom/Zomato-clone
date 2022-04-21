@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useCallback, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { FaTimes } from 'react-icons/fa';
@@ -22,6 +22,10 @@ const AuthForm: FC<AuthFormProps> = ({ loginOrSignup }) => {
 
   const dispatch = useDispatch();
 
+  const handleCloseForm = useCallback(() => {
+    dispatch(toggleAuthForm('Close', 'for closing'));
+  }, [dispatch]);
+
   useEffect(() => {
     if (loginOrSignup === 'Login') {
       setIsLogin(true);
@@ -30,11 +34,7 @@ const AuthForm: FC<AuthFormProps> = ({ loginOrSignup }) => {
     } else {
       handleCloseForm();
     }
-  }, [loginOrSignup]);
-
-  const handleCloseForm = () => {
-    dispatch(toggleAuthForm('Close', 'for closing'));
-  };
+  }, [loginOrSignup, handleCloseForm]);
 
   const handleEnableEmailLogin = () => {
     setIsEmailLogin(true);

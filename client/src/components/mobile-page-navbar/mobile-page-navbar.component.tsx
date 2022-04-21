@@ -1,52 +1,25 @@
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
 
-import { toggleNavMenu, toggleAuthForm } from '../../redux/UI/ui.actions';
-import { LoginOrSignUpType } from '../../redux/UI/ui.types';
+import AuthLinks from '../auth-links/auth-links.component';
+import NavbarSmall from '../navbar-small/navbar-small.component';
 
 import Logo from '../../images/zomato-text-black.png';
+
 import './mobile-page-navbar.styles.css';
 
 const MobilePageNavbar = () => {
-  const dispatch = useDispatch();
-
-  const handleOpenAuthForm = (loginOrSignup: LoginOrSignUpType) => {
-    dispatch(toggleAuthForm('Open', loginOrSignup));
-  };
-
   return (
     <div className='mobile-page-navbar__container'>
       <div className='mobile-page-navbar__inner-container'>
         <Link to='/'>
-          <img className='moble-page-navbar__logo' src={Logo} alt='Zomato' />
+          <img className='mobile-page-navbar__logo' src={Logo} alt='Zomato' />
         </Link>
         <div className='mobile-page-navbar__links'>
-          <div
-            className='mobile-page-navbar__link'
-            onClick={() => handleOpenAuthForm('Login')}
-          >
-            Log in
-          </div>
-          <div
-            className='mobile-page-navbar__link'
-            onClick={() => handleOpenAuthForm('Sign Up')}
-          >
-            Sign up
-          </div>
+          <AuthLinks />
         </div>
       </div>
-      <div className='moblie-page-navbar__inner-container--sm'>
-        <div
-          className='mobile-page-navbar__hamburger'
-          onClick={() => dispatch(toggleNavMenu())}
-        >
-          <GiHamburgerMenu />
-        </div>
-        <Link to='/'>
-          <img className='moble-page-navbar__logo' src={Logo} alt='Zomato' />
-        </Link>
-      </div>
+      {/* here, NavbarSmall component will only render when screen width is 768px or below */}
+      <NavbarSmall page='MobileApp' />
     </div>
   );
 };

@@ -10,7 +10,7 @@ import ZomatoTextBlack from '../../images/zomato-text-black.png';
 import './nav-menu.styles.css';
 
 interface NavMenuProps {
-  page: 'Home' | 'Mobile';
+  page: 'Home' | 'MobileApp' | 'Food';
 }
 
 const NavMenu: FC<NavMenuProps> = ({ page }) => {

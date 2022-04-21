@@ -3,13 +3,17 @@ import { useSelector } from 'react-redux';
 
 import { RootState } from './redux/store';
 
-import NavMenu from './components/nav-menu/nav-menu.component';
-import DarkOverlay from './components/dark-overlay/dark-overlay.component';
-import AuthForm from './components/auth-form/auth-form.component';
-
 import HomePage from './pages/home/home.component';
 import PartnerWithUs from './pages/partner-with-us/partner-with-us.component';
 import MobileAppPage from './pages/mobile-app/mobile-app.component';
+import FoodPage from './pages/food/food.component';
+
+import NavMenu from './components/nav-menu/nav-menu.component';
+import DarkOverlay from './components/dark-overlay/dark-overlay.component';
+import AuthForm from './components/auth-form/auth-form.component';
+import OrderOnline from './components/order-online/order-online.component';
+import DiningOut from './components/dining-out/dining-out.component';
+import DrinksAndNightlife from './components/drinks-and-nightlife/drinks-and-nightlife.component';
 
 import './App.css';
 
@@ -37,9 +41,20 @@ const App = () => {
           <Route
             path='mobile'
             element={
-              isMenuHidden ? <MobileAppPage /> : <NavMenu page='Mobile' />
+              isMenuHidden ? <MobileAppPage /> : <NavMenu page='MobileApp' />
             }
           />
+          <Route
+            path='food'
+            element={isMenuHidden ? <FoodPage /> : <NavMenu page='Food' />}
+          >
+            <Route path='order-food-online' element={<OrderOnline />} />
+            <Route path='dining-out' element={<DiningOut />} />
+            <Route
+              path='drinks-and-nightlife'
+              element={<DrinksAndNightlife />}
+            />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

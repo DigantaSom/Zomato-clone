@@ -2,6 +2,7 @@ export interface TileI {
   id: string;
   title: string;
   imagePath: string;
+  route: string;
 }
 
 export interface CollectionItemI extends TileI {
