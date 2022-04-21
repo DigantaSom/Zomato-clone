@@ -26,6 +26,7 @@
   font-size: 1.2rem;
   color: #696969;
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .moblie-page-navbar__inner-container--sm {
