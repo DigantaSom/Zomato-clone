@@ -89,11 +89,6 @@ h6.footer__link-header {
   margin: 1.43rem 0 0.81rem;
 }
 
-.footer__copyright small {
-  color: rgba(79, 79, 79, 0.7);
-  font-size: 0.8rem;
-}
-
 @media screen and (max-width: 870px) {
   .footer__links-left-container {
     grid-template-columns: repeat(2, 1fr);

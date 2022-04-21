@@ -2,13 +2,18 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-import { toggleNavMenu } from '../../redux/UI/ui.actions';
+import { toggleNavMenu, toggleAuthForm } from '../../redux/UI/ui.actions';
+import { LoginOrSignUpType } from '../../redux/UI/ui.types';
 
 import './navbar.styles.css';
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const handleOpenAuthForm = (loginOrSignup: LoginOrSignUpType) => {
+    dispatch(toggleAuthForm('Open', loginOrSignup));
+  };
 
   return (
     <nav className='app__container navbar__nav'>
@@ -28,8 +33,18 @@ const Navbar = () => {
         >
           Add restaurant
         </div>
-        <div className='navbar__nav-link'>Log in</div>
-        <div className='navbar__nav-link'>Sign up</div>
+        <div
+          className='navbar__nav-link'
+          onClick={() => handleOpenAuthForm('Login')}
+        >
+          Log in
+        </div>
+        <div
+          className='navbar__nav-link'
+          onClick={() => handleOpenAuthForm('Sign Up')}
+        >
+          Sign up
+        </div>
       </div>
     </nav>
   );

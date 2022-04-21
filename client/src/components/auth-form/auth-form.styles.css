@@ -1,0 +1,197 @@
+.auth-form__container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  width: 28rem;
+  min-height: 9.3rem;
+  background-color: #fff;
+  box-shadow: 0 1.2rem 7rem rgb(28 28 28 / 15%);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+}
+
+.auth-form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  color: #4f4f4f;
+}
+
+.auth-form__header h2 {
+  margin: 0;
+  font-size: 1.875rem;
+}
+
+.auth-form__back-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.auth-form__close-btn {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.auth-form__phone-input-container {
+  display: flex;
+  height: 3rem;
+}
+
+.auth-form__phone-input-container select {
+  width: 20%;
+  font-size: 1rem;
+  text-align: center;
+  border: 0.1rem solid #cfcfcf;
+  border-right: none;
+  border-radius: 0.4rem 0 0 0.4rem;
+  outline: none;
+}
+
+input.auth-input {
+  width: 100%;
+  padding: 1.3rem 1.2rem;
+  border: 0.1rem solid #cfcfcf;
+  border-radius: 0.4rem;
+  outline: none;
+  font-size: 1.125rem;
+}
+
+input.auth-input::placeholder {
+  color: #bbb;
+}
+
+input.login-input {
+  height: 3rem;
+}
+
+input.phone-login-input {
+  flex: 1;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* TODO: maybe export this selector styles to App.css if needed */
+.auth-form__hr {
+  width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0;
+  margin: 0;
+}
+
+.auth-form__login-btn-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.auth-form__login-btn {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  margin: 0.6rem 0;
+  padding-left: 5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.auth-form__login-icon {
+  font-size: 1.8rem;
+  margin-right: 1.1rem;
+}
+
+.auth-form__login-btn span {
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.auth-form__switch-auth-para {
+  font-size: 1.05rem;
+  color: #1c1c1c;
+  opacity: 0.75;
+  margin-bottom: 0;
+}
+
+.auth-form__switch-auth-para span:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .auth-form__container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    width: 90vw;
+    min-height: 9.3rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .auth-form__header h2 {
+    font-size: 1.6rem;
+  }
+
+  .auth-form__phone-input-container select {
+    height: 2.8rem;
+  }
+
+  input.auth-input {
+    font-size: 1rem;
+    height: 2.8rem;
+  }
+
+  .auth-form__login-btn {
+    height: 2.8rem;
+    padding-left: 15%;
+  }
+
+  .auth-form__login-btn span {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .auth-form__phone-input-container select {
+    font-size: 0.9rem;
+  }
+
+  input.auth-input {
+    font-size: 0.9rem;
+  }
+
+  .auth-form__login-btn {
+    padding: 0 1rem;
+  }
+
+  .auth-form__login-icon {
+    margin-right: 0.8rem;
+  }
+
+  .auth-form__switch-auth-para {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .auth-form__phone-input-container select {
+    width: 23%;
+  }
+
+  .auth-form__login-btn {
+    padding: 0 4%;
+  }
+
+  .auth-form__login-btn span {
+    font-size: 0.9rem;
+  }
+}

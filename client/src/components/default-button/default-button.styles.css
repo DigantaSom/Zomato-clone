@@ -1,0 +1,32 @@
+.default-button__btn {
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  color: white;
+  border: 1px solid #cfcfcf;
+  border-radius: 0.5rem;
+  margin: 0.8rem 0;
+  outline: none;
+}
+
+.default-button__btn:hover {
+  background-color: #e03f4f !important;
+  cursor: pointer;
+}
+
+.default-button__btn:disabled {
+  background-color: #cfcfcf !important;
+  cursor: no-drop;
+}
+
+@media screen and (max-width: 480px) {
+  .default-button__btn {
+    height: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .default-button__btn {
+    font-size: 0.9rem;
+  }
+}

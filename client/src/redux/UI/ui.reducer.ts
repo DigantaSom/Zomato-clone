@@ -1,11 +1,24 @@
-import { TOGGLE_NAV_MENU, UiActionType } from './ui.types';
+import {
+  LoginOrSignUpType,
+  TOGGLE_AUTH_FORM,
+  TOGGLE_NAV_MENU,
+  UiActionType,
+} from './ui.types';
 
 interface UIstate {
   isMenuHidden: boolean;
+  authForm: {
+    isAuthFormHidden: boolean;
+    loginOrSignup: LoginOrSignUpType;
+  };
 }
 
 const initialState: UIstate = {
   isMenuHidden: true,
+  authForm: {
+    isAuthFormHidden: true,
+    loginOrSignup: 'Login',
+  },
 };
 
 const uiReducer = (
@@ -17,6 +30,15 @@ const uiReducer = (
       return {
         ...state,
         isMenuHidden: !state.isMenuHidden,
+      };
+
+    case TOGGLE_AUTH_FORM:
+      return {
+        ...state,
+        authForm: {
+          ...state.authForm,
+          ...action.payload,
+        },
       };
 
     default:

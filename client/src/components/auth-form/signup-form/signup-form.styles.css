@@ -1,0 +1,20 @@
+.signup-input {
+  margin: 0.7rem 0;
+}
+
+.signup-form__tnc {
+  margin-top: 0.6rem;
+}
+
+.signup-form__tnc {
+  display: flex;
+  margin-bottom: 0.4rem;
+}
+
+input[type='checkbox'].signup-form__tnc-checkbox {
+  margin-right: 0.65rem;
+}
+
+.signup-form__google-btn {
+  margin: 1rem 0;
+}

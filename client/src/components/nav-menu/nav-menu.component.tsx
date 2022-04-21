@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 
-import { toggleNavMenu } from '../../redux/UI/ui.actions';
+import { toggleAuthForm, toggleNavMenu } from '../../redux/UI/ui.actions';
+import { LoginOrSignUpType } from '../../redux/UI/ui.types';
 
 import ZomatoTextBlack from '../../images/zomato-text-black.png';
 import './nav-menu.styles.css';
@@ -30,6 +31,10 @@ const NavMenu: FC<NavMenuProps> = ({ page }) => {
     navigate('/partner-with-us');
   };
 
+  const handleOpenAuthForm = (loginOrSignup: LoginOrSignUpType) => {
+    dispatch(toggleAuthForm('Open', loginOrSignup));
+  };
+
   return (
     <div className='nav-menu__nav-menu'>
       <div className='nav-menu__header'>
@@ -54,8 +59,18 @@ const NavMenu: FC<NavMenuProps> = ({ page }) => {
             Add restaurant
           </div>
         )}
-        <div className='nav-menu__nav-link'>Log in</div>
-        <div className='nav-menu__nav-link'>Sign up</div>
+        <div
+          className='nav-menu__nav-link'
+          onClick={() => handleOpenAuthForm('Login')}
+        >
+          Log in
+        </div>
+        <div
+          className='nav-menu__nav-link'
+          onClick={() => handleOpenAuthForm('Sign Up')}
+        >
+          Sign up
+        </div>
       </div>
     </div>
   );
