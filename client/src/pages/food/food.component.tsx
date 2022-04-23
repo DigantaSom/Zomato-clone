@@ -8,6 +8,7 @@ import NavbarSmall from '../../components/navbar-small/navbar-small.component';
 import ZomatoLogoBlack from '../../images/zomato-text-black.png';
 
 import './food.styles.css';
+import FoodPageNav from '../../components/food-page-nav/food-page-nav.component';
 
 const FoodPage = () => {
   const [searchText, setSearchText] = useState('');
@@ -36,6 +37,8 @@ const FoodPage = () => {
         {/* here, NavbarSmall component will only render when screen width is 850px or below */}
         <NavbarSmall page='Food' />
       </div>
+
+      <FoodPageNav />
 
       <Outlet />
     </div>

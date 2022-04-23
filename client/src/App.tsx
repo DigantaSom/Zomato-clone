@@ -48,6 +48,7 @@ const App = () => {
             path='food'
             element={isMenuHidden ? <FoodPage /> : <NavMenu page='Food' />}
           >
+            <Route index element={<OrderOnline />} />
             <Route path='order-food-online' element={<OrderOnline />} />
             <Route path='dining-out' element={<DiningOut />} />
             <Route
