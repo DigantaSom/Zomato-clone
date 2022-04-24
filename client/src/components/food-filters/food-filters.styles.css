@@ -1,0 +1,12 @@
+.food-filters__container {
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 470px) {
+  .food-filters__container {
+    margin: 0.5rem 0;
+  }
+}

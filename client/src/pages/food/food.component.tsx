@@ -4,11 +4,12 @@ import { Link, Outlet } from 'react-router-dom';
 import SearchBar from '../../components/search-bar/search-bar.component';
 import AuthLinks from '../../components/auth-links/auth-links.component';
 import NavbarSmall from '../../components/navbar-small/navbar-small.component';
+import FoodPageNav from '../../components/food-page-nav/food-page-nav.component';
+import FoodFilters from '../../components/food-filters/food-filters.component';
 
 import ZomatoLogoBlack from '../../images/zomato-text-black.png';
 
 import './food.styles.css';
-import FoodPageNav from '../../components/food-page-nav/food-page-nav.component';
 
 const FoodPage = () => {
   const [searchText, setSearchText] = useState('');
@@ -39,6 +40,7 @@ const FoodPage = () => {
       </div>
 
       <FoodPageNav />
+      <FoodFilters />
 
       <Outlet />
     </div>

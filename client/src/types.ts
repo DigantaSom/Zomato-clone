@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons';
+
 export interface TileI {
   id: string;
   title: string;
@@ -41,4 +43,11 @@ export interface CountryFlagI {
   id: string;
   name: string;
   flagUri: string;
+}
+
+export interface FilterOptionI {
+  id: string;
+  name: string;
+  iconName?: string;
+  isDropdown: boolean;
 }
