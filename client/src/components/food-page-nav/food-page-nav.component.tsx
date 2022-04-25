@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import DeliveryIcon from '../../images/food-types/delivery.png';
 import DeliveryGrayedIcon from '../../images/food-types/delivery-grayed.png';
@@ -12,58 +13,55 @@ import { Img, ImgContainer, Nav, NavItem, Text } from './food-page-nav.styles';
 type ItemType = 'Delivery' | 'Dining Out' | 'Nightlife';
 
 const FoodPageNav = () => {
-  const [selectedItem, setSelectedItem] = useState<ItemType>('Delivery');
+  const location = useLocation();
+  const [selectedTab, setSelectedTab] = useState<ItemType>('Delivery');
+
+  useEffect(() => {
+    const path: string = location.pathname.split('/')[2];
+
+    if (path === 'order-food-online') {
+      setSelectedTab('Delivery');
+    } else if (path === 'dining-out') {
+      setSelectedTab('Dining Out');
+    } else if (path === 'drinks-and-nightlife') {
+      setSelectedTab('Nightlife');
+    }
+  }, [location.pathname]);
 
   return (
     <Nav>
-      <NavItem
-        to='order-food-online'
-        selected={selectedItem === 'Delivery'}
-        onClick={() => setSelectedItem('Delivery')}
-      >
-        <ImgContainer selected={selectedItem === 'Delivery'}>
+      <NavItem to='order-food-online' selected={selectedTab === 'Delivery'}>
+        <ImgContainer selected={selectedTab === 'Delivery'}>
           <Img
-            src={
-              selectedItem === 'Delivery' ? DeliveryIcon : DeliveryGrayedIcon
-            }
+            src={selectedTab === 'Delivery' ? DeliveryIcon : DeliveryGrayedIcon}
             alt='Delivery'
           />
         </ImgContainer>
-        <Text selected={selectedItem === 'Delivery'}>Delivery</Text>
+        <Text selected={selectedTab === 'Delivery'}>Delivery</Text>
       </NavItem>
 
-      <NavItem
-        to='dining-out'
-        selected={selectedItem === 'Dining Out'}
-        onClick={() => setSelectedItem('Dining Out')}
-      >
-        <ImgContainer selected={selectedItem === 'Dining Out'}>
+      <NavItem to='dining-out' selected={selectedTab === 'Dining Out'}>
+        <ImgContainer selected={selectedTab === 'Dining Out'}>
           <Img
             src={
-              selectedItem === 'Dining Out'
-                ? DiningOutIcon
-                : DiningOutGrayedIcon
+              selectedTab === 'Dining Out' ? DiningOutIcon : DiningOutGrayedIcon
             }
             alt='Dining Out'
           />
         </ImgContainer>
-        <Text selected={selectedItem === 'Dining Out'}>Dining Out</Text>
+        <Text selected={selectedTab === 'Dining Out'}>Dining Out</Text>
       </NavItem>
 
-      <NavItem
-        to='drinks-and-nightlife'
-        selected={selectedItem === 'Nightlife'}
-        onClick={() => setSelectedItem('Nightlife')}
-      >
-        <ImgContainer selected={selectedItem === 'Nightlife'}>
+      <NavItem to='drinks-and-nightlife' selected={selectedTab === 'Nightlife'}>
+        <ImgContainer selected={selectedTab === 'Nightlife'}>
           <Img
             src={
-              selectedItem === 'Nightlife' ? NightlifeIcon : NightlifeGrayedIcon
+              selectedTab === 'Nightlife' ? NightlifeIcon : NightlifeGrayedIcon
             }
             alt='Nightlife'
           />
         </ImgContainer>
-        <Text selected={selectedItem === 'Nightlife'}>Nightlife</Text>
+        <Text selected={selectedTab === 'Nightlife'}>Nightlife</Text>
       </NavItem>
     </Nav>
   );

@@ -51,3 +51,9 @@ export interface FilterOptionI {
   iconName?: string;
   isDropdown: boolean;
 }
+
+export type SlideshowType = 'order' | 'brands';
+
+export interface SlideShowI extends TileI {
+  subtitle?: string;
+}

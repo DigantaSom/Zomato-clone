@@ -23,14 +23,34 @@
   justify-content: flex-end;
 }
 
+/* this class is used in every child component of the food-page */
+.food-page__heading {
+  font-size: 2rem;
+  color: #1c1c1c;
+  opacity: 0.85;
+  margin: 0 0 2.5rem 0;
+}
+
 @media screen and (max-width: 1000px) {
   .food-page__header-searchbar-container {
     margin: 0 0.75rem;
+  }
+
+  .food-page__heading {
+    font-size: 1.7rem;
+    margin: 0 0 2rem 0;
   }
 }
 
 @media screen and (max-width: 850px) {
   .food-page__header-inner {
     display: none;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .food-page__heading {
+    font-size: 1.4rem;
+    margin: 0 0 1.7rem 0;
   }
 }

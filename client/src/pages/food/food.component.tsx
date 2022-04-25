@@ -15,35 +15,37 @@ const FoodPage = () => {
   const [searchText, setSearchText] = useState('');
 
   return (
-    <div className='app__container'>
-      <div className='food-page__header'>
-        <div className='food-page__header-inner'>
-          <Link to='/'>
-            <img
-              src={ZomatoLogoBlack}
-              alt='Zomato'
-              className='food-page__header-logo'
-            />
-          </Link>
-          <div className='food-page__header-searchbar-container'>
-            <SearchBar
-              searchText={searchText}
-              onChangeSearchText={e => setSearchText(e.target.value)}
-            />
+    <>
+      <div className='app__container'>
+        <div className='food-page__header'>
+          <div className='food-page__header-inner'>
+            <Link to='/'>
+              <img
+                src={ZomatoLogoBlack}
+                alt='Zomato'
+                className='food-page__header-logo'
+              />
+            </Link>
+            <div className='food-page__header-searchbar-container'>
+              <SearchBar
+                searchText={searchText}
+                onChangeSearchText={e => setSearchText(e.target.value)}
+              />
+            </div>
+            <div className='food-page__header-auth-links'>
+              <AuthLinks />
+            </div>
           </div>
-          <div className='food-page__header-auth-links'>
-            <AuthLinks />
-          </div>
+          {/* here, NavbarSmall component will only render when screen width is 850px or below */}
+          <NavbarSmall page='Food' />
         </div>
-        {/* here, NavbarSmall component will only render when screen width is 850px or below */}
-        <NavbarSmall page='Food' />
+
+        <FoodPageNav />
+        <FoodFilters />
       </div>
 
-      <FoodPageNav />
-      <FoodFilters />
-
       <Outlet />
-    </div>
+    </>
   );
 };
 
