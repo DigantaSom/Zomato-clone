@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 import SearchBar from '../../components/search-bar/search-bar.component';
@@ -6,6 +6,8 @@ import AuthLinks from '../../components/auth-links/auth-links.component';
 import NavbarSmall from '../../components/navbar-small/navbar-small.component';
 import FoodPageNav from '../../components/food-page-nav/food-page-nav.component';
 import FoodFilters from '../../components/food-filters/food-filters.component';
+import Footer from '../../components/footer/footer.component';
+import ScrollToTop from 'src/components/scroll-to-top/scroll-to-top.component';
 
 import ZomatoLogoBlack from '../../images/zomato-text-black.png';
 
@@ -13,11 +15,36 @@ import './food.styles.css';
 
 const FoodPage = () => {
   const [searchText, setSearchText] = useState('');
+  const [showScrollBtn, setshowScrollBtn] = useState(false);
+  const foodPageTopRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollFunc = () => {
+      const y = window.scrollY;
+      if (y > window.innerHeight) {
+        setshowScrollBtn(true);
+      } else {
+        setshowScrollBtn(false);
+      }
+    };
+    window.addEventListener('scroll', scrollFunc);
+
+    return () => window.removeEventListener('scroll', scrollFunc);
+  }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: foodPageTopRef.current?.offsetTop,
+    });
+  };
 
   return (
     <>
+      {showScrollBtn && <ScrollToTop handleClick={handleScrollToTop} />}
+
       <div className='app__container'>
-        <div className='food-page__header'>
+        <div className='food-page__header' ref={foodPageTopRef}>
           <div className='food-page__header-inner'>
             <Link to='/'>
               <img
@@ -45,6 +72,8 @@ const FoodPage = () => {
       </div>
 
       <Outlet />
+
+      <Footer page='Food' />
     </>
   );
 };

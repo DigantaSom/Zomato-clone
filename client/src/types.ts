@@ -57,3 +57,21 @@ export type SlideshowType = 'order' | 'brands';
 export interface SlideShowI extends TileI {
   subtitle?: string;
 }
+
+export type RestaurantKeyTypes = 'Delivery' | 'Dine-Out' | 'Nightlife';
+export type RestaurantValueType = {
+  id: string;
+  title: string;
+  subtitle: string;
+  imagePath: string;
+  rating: number;
+  price: string;
+  timeToDeliver: string;
+  discount?: string;
+  proDiscount?: string;
+  isPromoted?: boolean;
+  numOfRecentOrder: number;
+  isMaxSafetyDelivery?: boolean;
+  isSafeDelivery?: boolean;
+};
+export type RestaurantType = Record<RestaurantKeyTypes, RestaurantValueType[]>;

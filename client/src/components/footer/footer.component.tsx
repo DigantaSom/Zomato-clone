@@ -13,7 +13,7 @@ import FooterLogo from '../../images/zomato-text-black.png';
 import './footer.styles.css';
 
 interface FooterProps {
-  page: 'Home' | 'MobileApp';
+  page: 'Home' | 'MobileApp' | 'Food';
 }
 
 const Footer: FC<FooterProps> = ({ page }) => {

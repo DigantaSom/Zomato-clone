@@ -1,12 +1,20 @@
 import Slideshow from '../slideshow/slideshow.component';
+import RestaurantList from '../restaurant-list/restaurant-list.component';
 
-import './order-online.styles.css';
+import restaurants from 'src/constants/restaurants/restaurants.constant';
 
 const OrderOnline = () => {
   return (
-    <div className='order-online__container'>
+    <div>
       <Slideshow slideshowType='order' />
       <Slideshow slideshowType='brands' />
+
+      <div className='app__container'>
+        <RestaurantList
+          title='Order food online in Kolkata'
+          restaurants={restaurants['Delivery']}
+        />
+      </div>
     </div>
   );
 };
