@@ -8,6 +8,7 @@ import { RestaurantValueType } from 'src/types';
 import OrdersPlacedImg from 'src/images/restaurants/orders-placed-icon.png';
 import MaxSafetyImg from 'src/images/restaurants/max-safety-delivery.png';
 import SafetyImg from 'src/images/restaurants/safe-delivery.png';
+import MaxSafetyDining from 'src/images/restaurants/max-safety-dining.png';
 
 import {
   Tile,
@@ -23,10 +24,13 @@ import {
   Rating,
   SubTitle,
   Price,
+  Location,
+  OpensAt,
   BottomInfo,
   OrdersPlacedContainer,
   MaxSafetyContainer,
   SafetyContainer,
+  SafeDiningText,
 } from './restaurant-tile.styles';
 
 interface RestaurantTileProps {
@@ -36,6 +40,7 @@ interface RestaurantTileProps {
 const RestaurantTile: FC<RestaurantTileProps> = ({
   restaurant: {
     id,
+    type,
     imagePath,
     isPromoted,
     discount,
@@ -44,9 +49,12 @@ const RestaurantTile: FC<RestaurantTileProps> = ({
     title,
     rating,
     subtitle,
+    location,
+    opensAt,
     price,
     numOfRecentOrder,
     isMaxSafetyDelivery,
+    isMaxSafetyDining,
   },
 }) => {
   return (
@@ -74,25 +82,44 @@ const RestaurantTile: FC<RestaurantTileProps> = ({
           <SubTitle>{subtitle}</SubTitle>
           <Price>₹{price}</Price>
         </Flex>
+        {location && <Location>{location}</Location>}
+        {opensAt && <OpensAt>Opens at {opensAt}</OpensAt>}
 
-        <Divider colorHex='#E8E8E8' />
+        {type === 'Delivery' && (
+          <>
+            <Divider colorHex='#E8E8E8' />
+            <BottomInfo>
+              <OrdersPlacedContainer>
+                <img src={OrdersPlacedImg} alt='' />
+                <p>{numOfRecentOrder}+ orders placed from here recently</p>
+              </OrdersPlacedContainer>
 
-        <BottomInfo>
-          <OrdersPlacedContainer>
-            <img src={OrdersPlacedImg} alt='' />
-            <p>{numOfRecentOrder}+ orders placed from here recently</p>
-          </OrdersPlacedContainer>
+              {isMaxSafetyDelivery ? (
+                <MaxSafetyContainer>
+                  <img src={MaxSafetyImg} alt='Max Safety' />
+                </MaxSafetyContainer>
+              ) : (
+                <SafetyContainer>
+                  <img src={SafetyImg} alt='Safety' />
+                </SafetyContainer>
+              )}
+            </BottomInfo>
+          </>
+        )}
 
-          {isMaxSafetyDelivery ? (
-            <MaxSafetyContainer>
-              <img src={MaxSafetyImg} alt='Max Safety' />
-            </MaxSafetyContainer>
-          ) : (
-            <SafetyContainer>
-              <img src={SafetyImg} alt='Safety' />
-            </SafetyContainer>
-          )}
-        </BottomInfo>
+        {type === 'Dine-Out' && isMaxSafetyDining && (
+          <>
+            <Divider colorHex='#E8E8E8' />
+            <BottomInfo style={{ marginTop: '0.625rem' }}>
+              <MaxSafetyContainer>
+                <img src={MaxSafetyDining} alt='Safe Dining' />
+              </MaxSafetyContainer>
+              <SafeDiningText>
+                Follows all Max Safety measures for a safe dining experience
+              </SafeDiningText>
+            </BottomInfo>
+          </>
+        )}
       </Info>
     </Tile>
   );

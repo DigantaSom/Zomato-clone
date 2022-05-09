@@ -8,7 +8,7 @@ interface ImgContainerProps {
 }
 
 export const Tile = styled(Link)`
-  height: 23.75rem;
+  max-height: 26.75rem;
   max-width: 90%;
   padding: 10px;
   border-radius: 0.8rem;
@@ -98,6 +98,10 @@ export const Title = styled.p`
   color: #1c1c1c;
   font-weight: 1.2rem;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
 `;
 
 export const Rating = styled.div`
@@ -132,6 +136,20 @@ export const Price = styled.p`
   font-size: 0.875rem;
   color: #696969;
   opacity: 0.85;
+`;
+
+export const Location = styled.p`
+  margin-top: -10px;
+  color: #9c9c9c;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+export const OpensAt = styled.p`
+  color: #ab000d;
+  font-size: 0.875rem;
 `;
 
 export const BottomInfo = styled.div`
@@ -175,4 +193,11 @@ export const SafetyContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+`;
+
+export const SafeDiningText = styled.p`
+  margin: 0;
+  margin-left: 0.7rem;
+  color: #828282;
+  font-size: 0.75rem;
 `;

@@ -17,12 +17,14 @@ const FoodFilters = () => {
   };
 
   return (
-    <div className='food-filters__container'>
-      {filterOptions.map(option => (
-        <FilterOption key={option.id} option={option}>
-          {!option.iconName ? null : iconPasser(option.iconName)}
-        </FilterOption>
-      ))}
+    <div className='app__container'>
+      <div className='food-filters__container'>
+        {filterOptions.map(option => (
+          <FilterOption key={option.id} option={option}>
+            {!option.iconName ? null : iconPasser(option.iconName)}
+          </FilterOption>
+        ))}
+      </div>
     </div>
   );
 };

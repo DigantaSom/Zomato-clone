@@ -5,7 +5,6 @@ import SearchBar from '../../components/search-bar/search-bar.component';
 import AuthLinks from '../../components/auth-links/auth-links.component';
 import NavbarSmall from '../../components/navbar-small/navbar-small.component';
 import FoodPageNav from '../../components/food-page-nav/food-page-nav.component';
-import FoodFilters from '../../components/food-filters/food-filters.component';
 import Footer from '../../components/footer/footer.component';
 import ScrollToTop from 'src/components/scroll-to-top/scroll-to-top.component';
 
@@ -68,7 +67,6 @@ const FoodPage = () => {
         </div>
 
         <FoodPageNav />
-        <FoodFilters />
       </div>
 
       <Outlet />

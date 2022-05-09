@@ -61,17 +61,22 @@ export interface SlideShowI extends TileI {
 export type RestaurantKeyTypes = 'Delivery' | 'Dine-Out' | 'Nightlife';
 export type RestaurantValueType = {
   id: string;
+  type: RestaurantKeyTypes;
   title: string;
   subtitle: string;
+  location?: string;
   imagePath: string;
   rating: number;
   price: string;
-  timeToDeliver: string;
+  timeToDeliver?: string;
+  distance?: string;
   discount?: string;
   proDiscount?: string;
+  opensAt?: string;
   isPromoted?: boolean;
-  numOfRecentOrder: number;
+  numOfRecentOrder?: number;
   isMaxSafetyDelivery?: boolean;
   isSafeDelivery?: boolean;
+  isMaxSafetyDining?: boolean;
 };
 export type RestaurantType = Record<RestaurantKeyTypes, RestaurantValueType[]>;

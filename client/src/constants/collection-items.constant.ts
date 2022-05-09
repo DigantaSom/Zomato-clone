@@ -1,31 +1,36 @@
 import { CollectionItemI } from '../types';
 
+import LiveCricketScreeningImg from 'src/images/collections/live-cricket-screening.png';
+import PoilaBoishakhImg from 'src/images/collections/poila-boishakh.png';
+import NewlyOpenedImg from 'src/images/collections/newly-opened.png';
+import TrendingImg from 'src/images/collections/trending-this-week.png';
+
 const collectionItems: CollectionItemI[] = [
   {
     id: '1',
     title: 'Live Cricket Screening',
-    imagePath: './collections/live-cricket-screening.png',
+    imagePath: LiveCricketScreeningImg,
     numberOfPlaces: 31,
     route: '/sports-screening',
   },
   {
     id: '2',
     title: 'Poila Boishakh',
-    imagePath: './collections/poila-boishakh.png',
+    imagePath: PoilaBoishakhImg,
     numberOfPlaces: 11,
     route: '/poila-boishakh',
   },
   {
     id: '3',
     title: 'Newly Opened',
-    imagePath: './collections/newly-opened.png',
+    imagePath: NewlyOpenedImg,
     numberOfPlaces: 13,
     route: '/newly-opened',
   },
   {
     id: '4',
     title: 'Trending This Week',
-    imagePath: './collections/trending-this-week.png',
+    imagePath: TrendingImg,
     numberOfPlaces: 16,
     route: '/top-restaurants',
   },
