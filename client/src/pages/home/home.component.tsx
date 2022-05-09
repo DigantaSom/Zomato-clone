@@ -22,9 +22,7 @@ const HomePage = () => {
       <div className='home__get-app__outer-container'>
         <GetApp page='Home' />
       </div>
-      <div className='app__container'>
-        <ExploreOtherOptions />
-      </div>
+      <ExploreOtherOptions page='Home' />
       <Footer page='Home' />
     </>
   );

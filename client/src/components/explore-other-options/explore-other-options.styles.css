@@ -1,9 +1,10 @@
 .eoo__container {
   margin-top: 8rem;
+  padding-top: 1.5rem;
 }
 
 .eoo__inner-container {
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
 h2.eoo__heading {
@@ -32,7 +33,7 @@ h4.eoo__subheading {
   }
 
   .eoo__inner-container {
-    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 }
 
@@ -52,6 +53,6 @@ h4.eoo__subheading {
   }
 
   .eoo__inner-container {
-    margin-bottom: 2.75rem;
+    padding-bottom: 2.75rem;
   }
 }

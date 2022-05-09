@@ -5,6 +5,7 @@ import SearchBar from '../../components/search-bar/search-bar.component';
 import AuthLinks from '../../components/auth-links/auth-links.component';
 import NavbarSmall from '../../components/navbar-small/navbar-small.component';
 import FoodPageNav from '../../components/food-page-nav/food-page-nav.component';
+import ExploreOtherOptions from 'src/components/explore-other-options/explore-other-options.component';
 import Footer from '../../components/footer/footer.component';
 import ScrollToTop from 'src/components/scroll-to-top/scroll-to-top.component';
 
@@ -71,6 +72,7 @@ const FoodPage = () => {
 
       <Outlet />
 
+      <ExploreOtherOptions page='Food' />
       <Footer page='Food' />
     </>
   );
