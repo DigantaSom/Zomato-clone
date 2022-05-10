@@ -23,6 +23,15 @@ import AsiaAsiAsiaImg from 'src/images/restaurants/dining-out/asia-asia-asia.png
 import FlameAndGrillImg from 'src/images/restaurants/dining-out/flame-and-grill.png';
 import _4thStreetDiningHallImg from 'src/images/restaurants/dining-out/4th-street-dining-hall.png';
 
+import AfraaLoungeImg from 'src/images/restaurants/nightlife/afraa-lounge.png';
+import CanteenPubAndGrubImg from 'src/images/restaurants/nightlife/canteen-pub-and-grub.png';
+import CapellaImg from 'src/images/restaurants/nightlife/capella.png';
+import SabkaClubImg from 'src/images/restaurants/nightlife/sabka-club.png';
+import Refinery091Img from 'src/images/restaurants/nightlife/refinery-091.png';
+import CharnocksImg from 'src/images/restaurants/nightlife/charnocks.png';
+import LevelsTheClubImg from 'src/images/restaurants/nightlife/levels-the-club.png';
+import CountryRoadsImg from 'src/images/restaurants/nightlife/country-roads.png';
+
 const restaurants: RestaurantType = {
   Delivery: [
     {
@@ -301,7 +310,124 @@ const restaurants: RestaurantType = {
       opensAt: '12 noon',
     },
   ],
-  Nightlife: [],
+  Nightlife: [
+    {
+      id: 'Nightlife_1',
+      type: 'Nightlife',
+      title: 'Jungle Safari',
+      subtitle: 'North Indian, Mughlai, Biryani, Continental, Desserts',
+      location: 'Mani Square Mall, Kankurgachi, Kolkata',
+      imagePath: JungleSafariImg,
+      rating: 4.3,
+      price: '1,000 for two',
+      distance: '1.4 km',
+      proDiscount: 'Pro - Get 15% off',
+      opensAt: '12 noon',
+    },
+    {
+      id: 'Nightlife_2',
+      type: 'Nightlife',
+      title: 'Afraa Lounge',
+      subtitle:
+        'Italian, Pizza, Pasta, Continental, North Indian, Asian, Desserts',
+      location: 'City Centre 1, Sector 1, Salt Lake, Kolkata',
+      imagePath: AfraaLoungeImg,
+      rating: 4.4,
+      price: '1,800 for two',
+      distance: '1.4 km',
+      proDiscount: 'Pro - Get 15% off',
+      opensAt: '12 noon',
+      isMaxSafetyDining: true,
+    },
+    {
+      id: 'Nightlife_3',
+      type: 'Nightlife',
+      title: 'Canteen Pub & Grub',
+      subtitle: 'North Indian, Continental, Finger Food, Chinese, Japanese',
+      location: 'City Centre 1, Sector 1, Salt Lake, Kolkata',
+      imagePath: CanteenPubAndGrubImg,
+      rating: 4.2,
+      price: '1,700 for two',
+      distance: '1.5 km',
+      proDiscount: 'Pro - Get 20% off',
+    },
+    {
+      id: 'Nightlife_4',
+      type: 'Nightlife',
+      title: 'Capella - Altair Boutique Hotel',
+      subtitle: 'Continental, Italian, Finger Food, Asian, North Indian',
+      location: 'AltAir Boutique Hotel, Kolkata',
+      imagePath: CapellaImg,
+      rating: 4.3,
+      price: '2,500 for two',
+      distance: '1.5 km',
+      isMaxSafetyDining: true,
+    },
+    {
+      id: 'Nightlife_5',
+      type: 'Nightlife',
+      title: 'Sabka Club',
+      subtitle: 'North Indian, Continental, Chinese, Italian, Beverages',
+      location: 'Topsia, Kolkata',
+      imagePath: SabkaClubImg,
+      rating: 4.2,
+      price: '1,600 for two',
+      distance: '4.7 km',
+      proDiscount: 'Pro - Get 25% off',
+      isMaxSafetyDining: true,
+    },
+    {
+      id: 'Nightlife_6',
+      type: 'Nightlife',
+      title: 'Refinery 091',
+      subtitle:
+        'North Indian, Italian, Continental, Bar Food, Chinese, Beverages',
+      location: 'Sector 5, Salt Lake, Kolkata',
+      imagePath: Refinery091Img,
+      rating: 4.2,
+      price: '2,000 for two',
+      distance: '2.2 km',
+      proDiscount: 'Pro - Get 15% off',
+      isMaxSafetyDining: true,
+    },
+    {
+      id: 'Nightlife_7',
+      type: 'Nightlife',
+      title: "Charnock's",
+      subtitle:
+        'North Indian, Bengali, Biryani, Mughlai, Fast Food, Desserts, Ice Cream, Beverages',
+      location: 'Charnok City, Sector 3, Salt Lake, Kolkata',
+      imagePath: CharnocksImg,
+      rating: 4.0,
+      price: '1,000 for two',
+      distance: '987 m',
+    },
+    {
+      id: 'Nightlife_8',
+      type: 'Nightlife',
+      title: 'Levels - The Club',
+      subtitle: 'Bar Food, Chinese, North Indian, Beverages, Fast Food',
+      location: 'Sector 5, Salt Lake, Kolkata',
+      imagePath: LevelsTheClubImg,
+      rating: 4.1,
+      price: '1,200 for two',
+      distance: '2.2 km',
+      proDiscount: 'Pro - Get 20% off',
+    },
+    {
+      id: 'Nightlife_9',
+      type: 'Nightlife',
+      title: 'Country Roads',
+      subtitle:
+        'North Indian, Chinese, Continental, Fast Food, Desserts, Beverages',
+      location: 'New Town, Kolkata',
+      imagePath: CountryRoadsImg,
+      rating: 4.2,
+      price: '1,200 for two',
+      distance: '4.9 km',
+      proDiscount: 'Pro - Get 15% off',
+    },
+  ],
 };
 
 export default restaurants;

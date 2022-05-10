@@ -107,7 +107,7 @@ const RestaurantTile: FC<RestaurantTileProps> = ({
           </>
         )}
 
-        {type === 'Dine-Out' && isMaxSafetyDining && (
+        {(type === 'Dine-Out' || type === 'Nightlife') && isMaxSafetyDining && (
           <>
             <Divider colorHex='#E8E8E8' />
             <BottomInfo style={{ marginTop: '0.625rem' }}>

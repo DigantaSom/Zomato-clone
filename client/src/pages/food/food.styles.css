@@ -31,6 +31,13 @@
   margin: 0 0 2.5rem 0;
 }
 
+/* this class is used in both dining-out and nightlife child components */
+.food-page__collections-container {
+  background-color: #f8f8f8;
+  padding-top: 1px; /* just so that top padding is not zero (not 1px in effect, though) */
+  padding-bottom: 1.5rem;
+}
+
 @media screen and (max-width: 1000px) {
   .food-page__header-searchbar-container {
     margin: 0 0.75rem;

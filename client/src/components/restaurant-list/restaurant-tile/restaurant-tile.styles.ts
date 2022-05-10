@@ -9,14 +9,22 @@ interface ImgContainerProps {
 
 export const Tile = styled(Link)`
   max-height: 26.75rem;
-  max-width: 90%;
-  padding: 10px;
+  width: 30%;
+  padding: 0.625rem;
+  margin-bottom: 1.5rem;
   border-radius: 0.8rem;
   transition: 200ms all ease-in-out;
 
   :hover {
     cursor: pointer;
     box-shadow: 0 0 0.7rem rgb(0 0 0 / 20%);
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
   }
 `;
 

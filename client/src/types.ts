@@ -9,6 +9,7 @@ export interface TileI {
 
 export interface CollectionItemI extends TileI {
   numberOfPlaces: number;
+  type: 'Top_4' | 'Nightlife' | 'All';
 }
 
 export interface LocalityI {

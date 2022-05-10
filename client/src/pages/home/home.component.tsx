@@ -6,17 +6,22 @@ import GetApp from '../../components/get-app/get-app.component';
 import ExploreOtherOptions from '../../components/explore-other-options/explore-other-options.component';
 import Footer from '../../components/footer/footer.component';
 
+import { CollectionItemI } from 'src/types';
 import collectionItems from '../../constants/collection-items.constant';
 
 import './home.styles.css';
 
 const HomePage = () => {
+  const collectionsToShow: CollectionItemI[] = collectionItems.filter(
+    c => c.type === 'Top_4'
+  );
+
   return (
     <>
       <Landing />
       <div className='app__container'>
         <LandingTiles />
-        <Collections collectionItems={collectionItems} />
+        <Collections collectionItems={collectionsToShow} />
         <Localities />
       </div>
       <div className='home__get-app__outer-container'>
