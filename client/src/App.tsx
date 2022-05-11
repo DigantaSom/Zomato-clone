@@ -7,6 +7,9 @@ import HomePage from './pages/home/home.component';
 import PartnerWithUs from './pages/partner-with-us/partner-with-us.component';
 import MobileAppPage from './pages/mobile-app/mobile-app.component';
 import FoodPage from './pages/food/food.component';
+import AllCollections from './pages/food/all-collections/all-collections.component';
+import BookmarkedCollections from './pages/food/all-collections/bookmarked-collections/bookmarked-collections.component';
+import HandpickedCollections from './pages/food/all-collections/handpicked-collections/handpicked-collections.component';
 
 import NavMenu from './components/nav-menu/nav-menu.component';
 import DarkOverlay from './components/dark-overlay/dark-overlay.component';
@@ -55,6 +58,11 @@ const App = () => {
               path='drinks-and-nightlife'
               element={<DrinksAndNightlife />}
             />
+            <Route path='collections' element={<AllCollections />}>
+              <Route index element={<HandpickedCollections />} />
+              <Route path='featured' element={<HandpickedCollections />} />
+              <Route path='bookmarked' element={<BookmarkedCollections />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>

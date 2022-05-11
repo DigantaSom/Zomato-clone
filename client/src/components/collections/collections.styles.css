@@ -39,13 +39,6 @@ h6.collections__subheading-left {
   padding-right: 0.25rem;
 }
 
-.collections__tiles-container {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
 @media screen and (max-width: 850px) {
   h6.collections__subheading-left {
     font-size: 1rem;
@@ -53,10 +46,6 @@ h6.collections__subheading-left {
 }
 
 @media screen and (max-width: 630px) {
-  .collections__tiles-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .collections__subheading-right {
     display: none;
   }
@@ -70,11 +59,5 @@ h6.collections__subheading-left {
 
   .collections__subheading-right_sm > p {
     margin-right: 0.3rem;
-  }
-}
-
-@media screen and (max-width: 365px) {
-  .collections__tiles-container {
-    grid-template-columns: repeat(1, 1fr);
   }
 }

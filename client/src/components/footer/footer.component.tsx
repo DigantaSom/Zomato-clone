@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { SiLinkedin } from 'react-icons/si';
@@ -148,4 +148,4 @@ const Footer: FC<FooterProps> = ({ page }) => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

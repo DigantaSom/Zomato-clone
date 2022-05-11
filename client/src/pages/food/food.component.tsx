@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 import SearchBar from '../../components/search-bar/search-bar.component';
 import AuthLinks from '../../components/auth-links/auth-links.component';
@@ -15,8 +15,18 @@ import './food.styles.css';
 
 const FoodPage = () => {
   const [searchText, setSearchText] = useState('');
+  const [showFoodTabs, setShowFoodTabs] = useState(true);
   const [showScrollBtn, setshowScrollBtn] = useState(false);
   const foodPageTopRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.includes('/collections')) {
+      setShowFoodTabs(false);
+    } else {
+      setShowFoodTabs(true);
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     const scrollFunc = () => {
@@ -67,7 +77,7 @@ const FoodPage = () => {
           <NavbarSmall page='Food' />
         </div>
 
-        <FoodPageNav />
+        {showFoodTabs && <FoodPageNav />}
       </div>
 
       <Outlet />

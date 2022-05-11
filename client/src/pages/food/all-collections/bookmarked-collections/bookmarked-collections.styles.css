@@ -1,0 +1,38 @@
+.bookmarked-collections__no-saved {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookmarked-collections__no-saved-img {
+  width: 20.8rem;
+  height: 16.8rem;
+  user-select: none;
+}
+
+.bookmarked-collections__no-saved-text {
+  margin: 0.8rem 0 0;
+  font-size: 1.5rem;
+  color: #1c1c1c;
+  opacity: 0.8;
+  text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .bookmarked-collections__no-saved-text {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .bookmarked-collections__no-saved-img {
+    width: 80vw;
+    height: 62vw;
+  }
+
+  .bookmarked-collections__no-saved-text {
+    font-size: 1rem;
+  }
+}

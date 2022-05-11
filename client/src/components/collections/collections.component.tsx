@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineCaretRight } from 'react-icons/ai';
 
-import CollectionItem from '../collection-item/collection-item.component';
+import CollectionTiles from './collection-tiles/collection-tiles.component';
 
 import { CollectionItemI } from '../../types';
 import Colors from '../../constants/colors.constant';
@@ -23,7 +23,7 @@ const Collections: FC<CollectionsProps> = ({ collectionItems }) => {
           Kolkata, based on trends
         </h6>
         <Link
-          to='/'
+          to='/food/collections/featured'
           className='collections__subheading-right'
           style={{ color: Colors.zomatoPink }}
         >
@@ -32,11 +32,8 @@ const Collections: FC<CollectionsProps> = ({ collectionItems }) => {
         </Link>
       </div>
 
-      <div className='collections__tiles-container'>
-        {collectionItems.map(item => (
-          <CollectionItem key={item.id} collection={item} />
-        ))}
-      </div>
+      <CollectionTiles collectionItems={collectionItems} />
+
       <Link
         to='/'
         className='collections__subheading-right_sm'

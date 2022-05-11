@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 import ExploreOptionsDotted from './explore-options-dotted/explore-options-dotted.component';
 import ExploreOptionsColumn from './explore-options-column/explore-options-column.component';
@@ -39,4 +39,4 @@ const ExploreOtherOptions: FC<ExploreOtherOptionsProps> = ({ page }) => {
   );
 };
 
-export default ExploreOtherOptions;
+export default memo(ExploreOtherOptions);

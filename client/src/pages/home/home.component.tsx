@@ -13,7 +13,7 @@ import './home.styles.css';
 
 const HomePage = () => {
   const collectionsToShow: CollectionItemI[] = collectionItems.filter(
-    c => c.type === 'Top_4'
+    c => c.type === 'Featured'
   );
 
   return (

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineCaretRight } from 'react-icons/ai';
 
-import { CollectionItemI } from '../../types';
+import { CollectionItemI } from '../../../types';
 import './collection-item.styles.css';
 
 interface CollectionItemProps {

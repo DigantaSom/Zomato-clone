@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import DeliveryIcon from '../../images/food-types/delivery.png';
@@ -67,4 +67,4 @@ const FoodPageNav = () => {
   );
 };
 
-export default FoodPageNav;
+export default memo(FoodPageNav);

@@ -9,7 +9,7 @@ import collectionItems from 'src/constants/collection-items.constant';
 
 const DiningOut = () => {
   const collectionsToShow: CollectionItemI[] = collectionItems.filter(
-    c => c.type === 'Top_4'
+    c => c.type === 'Featured'
   );
 
   return (
